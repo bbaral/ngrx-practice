@@ -10,8 +10,7 @@ import {CourseDialogComponent} from "../course-dialog/course-dialog.component";
 })
 export class CoursesCardListComponent implements OnInit {
 
-    @Input()
-    courses: Course[];
+    @Input() courses: Course[];
 
     constructor(private dialog: MatDialog) {
     }

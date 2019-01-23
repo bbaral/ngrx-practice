@@ -19,8 +19,9 @@ export class HomeComponent implements OnInit {
 
     advancedCourses$: Observable<Course[]>;
 
-    constructor(private coursesService: CoursesService, private store: Store<AppState>) {
-
+    constructor(private coursesService: CoursesService,
+                private store: Store<AppState>) {
+      // store.dispatch();
     }
 
     ngOnInit() {
@@ -28,11 +29,11 @@ export class HomeComponent implements OnInit {
         const courses$ = this.coursesService.findAllCourses();
 
         this.beginnerCourses$ = courses$.pipe(
-          map(courses => courses.filter(course => course.category === 'BEGINNER') )
+          map(courses => courses.filter(course => course.category === 'BEGINNER'))
         );
 
         this.advancedCourses$ = courses$.pipe(
-            map(courses => courses.filter(course => course.category === 'ADVANCED') )
+            map(courses => courses.filter(course => course.category === 'ADVANCED'))
         );
 
         this.promoTotal$ = courses$.pipe(
