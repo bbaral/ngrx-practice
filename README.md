@@ -1,4 +1,8 @@
+## FYI
+Disclosure: This is not my code. I clone this code from angular university (vasco course) for practice purpose only.
 
+Regards
+Bikram
 ## Angular Ngrx Course
 
 This repository contains the code of the [Angular Ngrx Course](https://angular-university.io/course/angular-ngrx-course).
